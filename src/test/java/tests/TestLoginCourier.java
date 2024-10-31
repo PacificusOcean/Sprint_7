@@ -66,7 +66,7 @@ public class TestLoginCourier {
     @DisplayName("Тест на неправильный логин")
     @Description("Неуспешная авторизация при неверном логине")
 
-       public void loginCourierWrongLoginTest() {
+    public void loginCourierWrongLoginTest() {
 
         response = performLogin("wrong_login", password);
 
@@ -83,7 +83,7 @@ public class TestLoginCourier {
 // Тело запроса с неверным паролем
         response = performLogin(login, "wrong_pass");
 
-       // Проверяем код ответа
+        // Проверяем код ответа
         assertThat(response.statusCode(), equalTo(404));
         String errorMessage = response.then().extract().path("message");
         assertThat(errorMessage, containsString("Учетная запись не найдена"));
@@ -157,6 +157,7 @@ public class TestLoginCourier {
             int randomIndex = random.nextInt(lettersAndNumbers.length());
             password.append(lettersAndNumbers.charAt(randomIndex));
         }
+
         return password.toString();
     }
 
