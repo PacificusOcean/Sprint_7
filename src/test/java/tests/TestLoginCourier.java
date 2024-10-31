@@ -186,4 +186,4 @@ public class TestLoginCourier {
                 .when()
                 .delete(String.format("/api/v1/courier/%s", id));
     }
-}
+}//
