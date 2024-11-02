@@ -97,11 +97,8 @@ public class CreatingOrder {
         this.comment = comment;
         this.color = color;
     }
-        public CreatingOrder () {
-
-        }
+    public CreatingOrder () {
 
     }
 
-
-
+}//
